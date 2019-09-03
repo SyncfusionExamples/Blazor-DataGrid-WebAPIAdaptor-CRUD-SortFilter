@@ -1,0 +1,41 @@
+﻿@page "/"
+
+<h1>Hello, world!</h1>
+
+
+@using Syncfusion.EJ2.Blazor;
+@using Syncfusion.EJ2.Blazor.Grids;
+@using Syncfusion.EJ2.Blazor.Data;
+@using WebApplication1.Shared.Models;
+@using Microsoft.JSInterop
+@using Microsoft.AspNetCore.Components;
+@inject IJSRuntime JSRuntime
+@using WebApplication1.Shared.DataAccess
+@using WebApplication11
+
+
+@inject OrderContext order;
+
+
+<EjsGrid @ref="@grid" @ref:suppressField AllowPaging="true" TValue="Order" AllowSorting="true" AllowFiltering="true" Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Cancel", "Update" })">
+    <GridPageSettings PageSize="4"></GridPageSettings>
+    <EjsDataManager Url="/api/Default" Adaptor="Adaptors.WebApiAdaptor"></EjsDataManager>
+    <GridEditSettings AllowAdding="true" AllowEditing="true" AllowDeleting="true"></GridEditSettings>
+    <GridColumns>
+        <GridColumn Field="OrderID" HeaderText="Order ID" IsPrimaryKey="true" IsIdentity="true" TextAlign="@TextAlign.Right" Width="90"></GridColumn>
+        <GridColumn Field="CustomerID" HeaderText="Customer Name" Width="90"></GridColumn>
+        <GridColumn Field="EmployeeID" HeaderText="Employee ID" Width="90"></GridColumn>
+    </GridColumns>
+</EjsGrid>
+
+
+@code{
+
+    EjsGrid<Order> grid;
+    public object[] gridData { get; set; }
+    protected override void OnInitialized()
+    {
+
+    }
+
+}
