@@ -15,7 +15,7 @@ namespace WebApplication1.Shared.DataAccess
         {
             if (!optionsBuilder.IsConfigured)
             {
-                optionsBuilder.UseSqlServer(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=E:\IEJNC\blazor\githubsamples\WebAPI\blazorDataManager-274355488\WebApplication1.Shared\App_Data\NORTHWND.MDF;Integrated Security=True;Connect Timeout=30");
+                optionsBuilder.UseSqlServer(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=E:\IEJNC\blazor\githubsamples\New folder\EJ2-DataGrid-Blazor-WebAPIAdaptor-CRUD-SortFilter\WebAPI\blazorDataManager-274355488\WebApplication1.Server\App_Data\NORTHWND.MDF;Integrated Security=True;Connect Timeout=30");
             }
         }
     }

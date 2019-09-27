@@ -17,7 +17,7 @@
 @inject OrderContext order;
 
 
-<EjsGrid @ref="@grid" @ref:suppressField AllowPaging="true" TValue="Order" AllowSorting="true" AllowFiltering="true" Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Cancel", "Update" })">
+<EjsGrid @ref="@grid" AllowPaging="true" TValue="Order" AllowSorting="true" AllowFiltering="true" Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Cancel", "Update" })">
     <GridPageSettings PageSize="4"></GridPageSettings>
     <EjsDataManager Url="/api/Default" Adaptor="Adaptors.WebApiAdaptor"></EjsDataManager>
     <GridEditSettings AllowAdding="true" AllowEditing="true" AllowDeleting="true"></GridEditSettings>
