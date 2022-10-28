@@ -1,2 +1,14 @@
-# EJ2-DataGrid-Blazor-WebAPIAdaptor-CRUD-SortFilter
-In this demo, grid is bound with a remote data using WebApiAdaptorand CRUD operations, sorting and filtering are handled at server side.
+# Blazor DataGrid - WebAPIAdaptor with CRUD Operations
+
+This example shows that how to bind remote data and perform CRUD operations at server by using WebAPIAdaptor.
+
+## Prerequisites
+
+* Visual Studio 2022
+
+## How to run the project
+
+* Checkout this project to a location in your disk.
+* Open the solution file using the Visual Studio 2022.
+* Restore the NuGet packages by rebuilding the solution.
+* Run the project.
